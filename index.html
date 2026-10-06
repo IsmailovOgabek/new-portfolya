@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Developer Portfolio - Full Stack Developer">
+    <title>Sardor Umarov | Full Stack Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Particle Canvas -->
+    <canvas id="particles"></canvas>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow"></div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#home" class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Sardor</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Bosh sahifa</a></li>
+                <li><a href="#about" class="nav-link">Men haqimda</a></li>
+                <li><a href="#skills" class="nav-link">Ko'nikmalar</a></li>
+                <li><a href="#projects" class="nav-link">Loyihalar</a></li>
+                <li><a href="#experience" class="nav-link">Tajriba</a></li>
+                <li><a href="#contact" class="nav-link">Aloqa</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">
+                    <span class="wave">👋</span> Salom, men
+                </p>
+                <h1 class="hero-name">
+                    <span class="name-text">Sardor Umarov</span>
+                </h1>
+                <div class="hero-title-wrapper">
+                    <span class="typed-prefix">Men </span>
+                    <span class="typed-text" id="typed-text"></span>
+                    <span class="cursor-blink">|</span>
+                </div>
+                <p class="hero-description">
+                    Full Stack dasturchi. HTML, CSS, JavaScript, Python, Django va PostgreSQL bilan
+                    zamonaviy, tezkor va foydalanuvchiga qulay veb-ilovalar yarataman.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>Loyihalarni ko'rish</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Bog'lanish</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+                <div class="hero-social">
+                    <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="window-title">portfolio.py</span>
+                    </div>
+                    <pre class="code-content"><code><span class="code-keyword">class</span> <span class="code-class">Developer</span>:
+    <span class="code-keyword">def</span> <span class="code-func">__init__</span>(<span class="code-self">self</span>):
+        <span class="code-self">self</span>.name = <span class="code-string">"Sardor Umarov"</span>
+        <span class="code-self">self</span>.role = <span class="code-string">"Full Stack"</span>
+        <span class="code-self">self</span>.skills = [
+            <span class="code-string">"HTML/CSS/JS"</span>,
+            <span class="code-string">"Python"</span>,
+            <span class="code-string">"Django"</span>,
+            <span class="code-string">"PostgreSQL"</span>
+        ]
+
+    <span class="code-keyword">def</span> <span class="code-func">build</span>(<span class="code-self">self</span>):
+        <span class="code-keyword">return</span> <span class="code-string">"Amazing Apps 🚀"</span></code></pre>
+                </div>
+                <div class="floating-card card-1">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-database"></i>
+                    <span>PostgreSQL</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Pastga aylantiring</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Men haqimda</span>
+                <h2 class="section-title">Kimman va nima qilaman</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user-astronaut"></i>
+                        </div>
+                        <div class="image-border"></div>
+                        <div class="experience-badge">
+                            <span class="badge-number">3+</span>
+                            <span class="badge-text">Yillik<br>tajriba</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h3>Full Stack Dasturchi & Muammo Yechuvchi</h3>
+                    <p>
+                        Men zamonaviy veb-texnologiyalar bilan ishlaydigan full stack dasturchiman.
+                        Frontend da HTML, CSS, JavaScript orqali interaktiv va chiroyli interfeyslar,
+                        backend da esa Python va Django yordamida kuchli, xavfsiz API va server
+                        logikalarini yarataman.
+                    </p>
+                    <p>
+                        Ma'lumotlar bazasi sifatida PostgreSQL dan foydalanaman. Har bir loyihada
+                        toza kod, yaxshi arxitektura va foydalanuvchi tajribasiga alohida e'tibor beraman.
+                    </p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span class="info-label">Joylashuv</span>
+                                <span class="info-value">Toshkent, O'zbekiston</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span class="info-label">Email</span>
+                                <span class="info-value">sardor@example.com</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <span class="info-label">Holat</span>
+                                <span class="info-value available">Ishga ochiq</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-language"></i>
+                            <div>
+                                <span class="info-label">Tillar</span>
+                                <span class="info-value">O'zbek, Ingliz, Rus</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Men bilan ishlash</span>
+                        <i class="fas fa-handshake"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Ko'nikmalar</span>
+                <h2 class="section-title">Texnologiyalar va vositalar</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-categories">
+                <div class="skill-category" data-aos="fade-up">
+                    <div class="category-header">
+                        <div class="category-icon frontend">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML5</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">CSS3 / Sass</span>
+                                <span class="skill-percent">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript (ES6+)</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Responsive Design</span>
+                                <span class="skill-percent">94%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="94"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-delay="100">
+                    <div class="category-header">
+                        <div class="category-icon backend">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Backend</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percent">93%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="93"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Django / DRF</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">REST API</span>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Authentication</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-delay="200">
+                    <div class="category-header">
+                        <div class="category-icon database">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Database & Tools</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PostgreSQL</span>
+                                <span class="skill-percent">87%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="87"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git / GitHub</span>
+                                <span class="skill-percent">91%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="91"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Docker</span>
+                                <span class="skill-percent">78%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="78"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Linux / CLI</span>
+                                <span class="skill-percent">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="82"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Icons Grid -->
+            <div class="tech-icons">
+                <div class="tech-icon" data-tooltip="HTML5">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <div class="tech-icon" data-tooltip="CSS3">
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <div class="tech-icon" data-tooltip="JavaScript">
+                    <i class="fab fa-js"></i>
+                </div>
+                <div class="tech-icon" data-tooltip="Python">
+                    <i class="fab fa-python"></i>
+                </div>
+                <div class="tech-icon" data-tooltip="Django">
+                    <i class="fab fa-django"></i>
+                </div>
+                <div class="tech-icon" data-tooltip="PostgreSQL">
+                    <i class="fas fa-database"></i>
+                </div>
+                <div class="tech-icon" data-tooltip="Git">
+                    <i class="fab fa-git-alt"></i>
+                </div>
+                <div class="tech-icon" data-tooltip="Docker">
+                    <i class="fab fa-docker"></i>
+                </div>
+                <div class="tech-icon" data-tooltip="Linux">
+                    <i class="fab fa-linux"></i>
+                </div>
+                <div class="tech-icon" data-tooltip="VS Code">
+                    <i class="fas fa-code"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Loyihalar</span>
+                <h2 class="section-title">Tanlangan ishlarim</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">Barchasi</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card" data-category="fullstack">
+                    <div class="project-image">
+                        <div class="project-img-placeholder">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Django</span>
+                            <span>PostgreSQL</span>
+                            <span>JS</span>
+                        </div>
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">
+                            To'liq funksionalli onlayn do'kon. Mahsulotlar, savat, to'lov tizimi,
+                            admin panel va foydalanuvchi autentifikatsiyasi bilan.
+                        </p>
+                        <div class="project-tech">
+                            <span><i class="fab fa-python"></i> Python</span>
+                            <span><i class="fas fa-database"></i> PostgreSQL</span>
+                            <span><i class="fab fa-js"></i> JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card" data-category="fullstack">
+                    <div class="project-image">
+                        <div class="project-img-placeholder blog">
+                            <i class="fas fa-blog"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Django</span>
+                            <span>REST API</span>
+                            <span>CSS</span>
+                        </div>
+                        <h3 class="project-title">Blog & CMS Platform</h3>
+                        <p class="project-description">
+                            Zamonaviy blog tizimi. Markdown qo'llab-quvvatlash, kommentariyalar,
+                            kategoriyalar, qidiruv va admin paneli.
+                        </p>
+                        <div class="project-tech">
+                            <span><i class="fab fa-python"></i> Django</span>
+                            <span><i class="fas fa-code"></i> REST</span>
+                            <span><i class="fab fa-css3-alt"></i> CSS3</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card" data-category="frontend">
+                    <div class="project-image">
+                        <div class="project-img-placeholder dash">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <h3 class="project-title">Analytics Dashboard</h3>
+                        <p class="project-description">
+                            Interaktiv dashboard. Real-time grafiklar, filtrlash, responsive dizayn
+                            va qorong'u/yorug' rejim.
+                        </p>
+                        <div class="project-tech">
+                            <span><i class="fab fa-html5"></i> HTML5</span>
+                            <span><i class="fab fa-js"></i> JS</span>
+                            <span><i class="fas fa-chart-bar"></i> Charts</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card" data-category="backend">
+                    <div class="project-image">
+                        <div class="project-img-placeholder api">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Django REST</span>
+                            <span>PostgreSQL</span>
+                            <span>JWT</span>
+                        </div>
+                        <h3 class="project-title">Task Management API</h3>
+                        <p class="project-description">
+                            RESTful API. JWT autentifikatsiya, vazifalar, jamoalar, real-time
+                            bildirishnomalar va to'liq hujjatlashtirish.
+                        </p>
+                        <div class="project-tech">
+                            <span><i class="fab fa-python"></i> DRF</span>
+                            <span><i class="fas fa-database"></i> PostgreSQL</span>
+                            <span><i class="fas fa-key"></i> JWT</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="project-card" data-category="fullstack">
+                    <div class="project-image">
+                        <div class="project-img-placeholder chat">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Django Channels</span>
+                            <span>WebSocket</span>
+                            <span>JS</span>
+                        </div>
+                        <h3 class="project-title">Real-time Chat App</h3>
+                        <p class="project-description">
+                            WebSocket asosidagi chat ilovasi. Guruh suhbatlari, fayl yuborish,
+                            onlayn holat va bildirishnomalar.
+                        </p>
+                        <div class="project-tech">
+                            <span><i class="fab fa-python"></i> Channels</span>
+                            <span><i class="fas fa-bolt"></i> WebSocket</span>
+                            <span><i class="fab fa-js"></i> JS</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6 -->
+                <article class="project-card" data-category="frontend">
+                    <div class="project-image">
+                        <div class="project-img-placeholder portfolio-p">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <h3 class="project-title">Portfolio Template</h3>
+                        <p class="project-description">
+                            Zamonaviy portfolio shabloni. 3D effektlar, animatsiyalar,
+                            to'liq responsive va qorong'u dizayn.
+                        </p>
+                        <div class="project-tech">
+                            <span><i class="fab fa-html5"></i> HTML5</span>
+                            <span><i class="fab fa-css3-alt"></i> CSS3</span>
+                            <span><i class="fab fa-js"></i> JS</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Tajriba</span>
+                <h2 class="section-title">Ish tajribam</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Full Stack Developer</h3>
+                            <span class="timeline-date">2024 — Hozir</span>
+                        </div>
+                        <span class="timeline-company"><i class="fas fa-building"></i> Tech Solutions LLC</span>
+                        <p>
+                            Django va PostgreSQL asosida backend tizimlar, REST API lar yaratish.
+                            Frontend da interaktiv interfeyslar ishlab chiqish. Jamoa bilan Agile
+                            metodologiyasida ishlash.
+                        </p>
+                        <div class="timeline-skills">
+                            <span>Django</span>
+                            <span>PostgreSQL</span>
+                            <span>JavaScript</span>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Backend Developer</h3>
+                            <span class="timeline-date">2023 — 2024</span>
+                        </div>
+                        <span class="timeline-company"><i class="fas fa-building"></i> Digital Agency</span>
+                        <p>
+                            Python va Django yordamida veb-ilovalar backend qismini ishlab chiqish.
+                            Ma'lumotlar bazasi dizayni, optimizatsiya va API integratsiyalari.
+                        </p>
+                        <div class="timeline-skills">
+                            <span>Python</span>
+                            <span>Django</span>
+                            <span>PostgreSQL</span>
+                            <span>REST API</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Frontend Developer</h3>
+                            <span class="timeline-date">2022 — 2023</span>
+                        </div>
+                        <span class="timeline-company"><i class="fas fa-building"></i> Startup Hub</span>
+                        <p>
+                            HTML, CSS, JavaScript yordamida responsive va interaktiv veb-sahifalar
+                            yaratish. Foydalanuvchi interfeysi dizayni va animatsiyalar.
+                        </p>
+                        <div class="timeline-skills">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Responsive</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Freelance Developer</h3>
+                            <span class="timeline-date">2021 — 2022</span>
+                        </div>
+                        <span class="timeline-company"><i class="fas fa-laptop-house"></i> Mustaqil ish</span>
+                        <p>
+                            Turli mijozlar uchun veb-saytlar va kichik veb-ilovalar ishlab chiqish.
+                            To'liq loyiha boshqaruvi va mijozlar bilan muloqot.
+                        </p>
+                        <div class="timeline-skills">
+                            <span>HTML/CSS/JS</span>
+                            <span>Python</span>
+                            <span>Django</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Aloqa</span>
+                <h2 class="section-title">Keling, gaplashamiz</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Loyiha bormi? Keling muhokama qilaylik!</h3>
+                    <p>
+                        Yangi loyiha, hamkorlik yoki shunchaki savol bo'lsa — bemalol yozing.
+                        Imkon qadar tez javob beraman.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:sardor@example.com">sardor@example.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-telegram-plane"></i>
+                            </div>
+                            <div>
+                                <span class="contact-label">Telegram</span>
+                                <a href="#">@sardor_dev</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <span class="contact-label">Manzil</span>
+                                <span>Toshkent, O'zbekiston</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Ismingiz</label>
+                        <input type="text" id="name" name="name" placeholder="Ismingizni kiriting" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Mavzu</label>
+                        <input type="text" id="subject" name="subject" placeholder="Xabar mavzusi" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Xabar</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Xabaringizni yozing..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Yuborish</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <span class="logo-bracket">&lt;</span>
+                        <span class="logo-text">Sardor</span>
+                        <span class="logo-bracket">/&gt;</span>
+                    </a>
+                    <p>Full Stack Developer. Zamonaviy veb-ilovalar yarataman.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Tezkor havolalar</h4>
+                    <ul>
+                        <li><a href="#home">Bosh sahifa</a></li>
+                        <li><a href="#about">Men haqimda</a></li>
+                        <li><a href="#skills">Ko'nikmalar</a></li>
+                        <li><a href="#projects">Loyihalar</a></li>
+                        <li><a href="#contact">Aloqa</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Ijtimoiy tarmoqlar</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sardor Umarov. Barcha huquqlar himoyalangan.</p>
+                <p class="made-with">HTML · CSS · JavaScript bilan yaratilgan ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Yuqoriga">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
